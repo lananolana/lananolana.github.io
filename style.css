@@ -17,7 +17,7 @@ body {
 .centered {
   display: flex;
   align-items: center;
-  height: 100%; /* Занимать всю высоту контейнера */
+  height: 100%;
 }
 
 .column-1, 
@@ -25,16 +25,16 @@ body {
   display: grid;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%; /* Устанавливаем высоту столбцов равной высоте родительской сетки */
+  height: 100%;
   padding: 2vw;
 }
 
 .fixed-height {
-  height: 38vw; /* Замените на желаемую фиксированную высоту */
+  height: 38vw;
 }
 
 .fixed-height-second {
-  height: 15vw; /* Замените на желаемую фиксированную высоту */
+  height: 15vw;
 }
 
 .container.visible {
@@ -81,11 +81,11 @@ body {
 .link::before {
   content: "";
   position: absolute;
-  bottom: -0.5vw; /* Отступ от нижней части текста */
+  bottom: -0.5vw;
   left: 0;
   width: 100%;
-  height: 1px; /* Толщина линии */
-  background-color: #D392FA; /* Цвет подчеркивания */
+  height: 1px;
+  background-color: #D392FA;
   opacity: 0.25;
   transform: scaleX(0);
   transform-origin: bottom left;
@@ -102,18 +102,18 @@ body {
 }
 
 .social-icons a {
-  margin: 0vw 1vw; /* Отступ между иконками */
+  margin: 0vw 1vw;
 }
 
 .social-icons img {
-  width: 3vw; /* Размер логотипа */
-  height: 3vw; /* Размер логотипа */
-  transition: transform 0.2s; /* Плавный эффект при наведении */
+  width: 3vw;
+  height: 3vw;
+  transition: transform 0.2s;
   opacity: 0.25;
 }
 
 .social-icons img:hover {
-  transform: scale(1.2); /* Увеличение размера при наведении */
+  transform: scale(1.2);
   opacity: 1;
 }
 
@@ -154,7 +154,7 @@ body {
   opacity: 0.7;
 }
 
-/*СТИЛИ ПОПАПА*/
+/* Styles of popup */
 
 .pop_up {
   width: 100%;
@@ -246,25 +246,25 @@ body {
   text-align: center;
   width: 130px;
   position: absolute;
-  top: 40px; /* Расположение попапа над иконкой */
-  left: 100%; /* Центрирование по горизонтали */
-  transform: translateX(0%); /* Центрирование по горизонтали */
+  top: 40px;
+  left: 100%;
+  transform: translateX(0%);
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
   padding: 5px 10px;
   border-radius: 5px;
   font-size: 12px;
-  opacity: 0; /* Начально попап невидим */
+  opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .backend:hover::after {
-  opacity: 1; /* Показываем попап при наведении */
+  opacity: 1;
   visibility: visible;
 }
 
-/*Кнопка прокрутки*/
+/* Scroll button */
 
 .btn-up {
   position: fixed;
@@ -298,7 +298,7 @@ body {
   }
 }
 
-/*Иконки при наведении на изображение*/
+/* Icons when hovering over an image */
 
 .icon-container {
   position: absolute;
@@ -329,7 +329,7 @@ body {
   opacity: 0.8;
 }
 
-/*Градиент при наведении на изображение*/
+/* Gradient when hovering over an image */
 
 .gradient-overlay {
   position: absolute;
@@ -346,7 +346,7 @@ body {
   opacity: 0.7;
 }
 
-/*Заголовок и подзаголовок при наведении на картинку*/
+/* Header and subheader when hovering over an image */
 
 .caption {
   position: absolute;
@@ -374,7 +374,7 @@ body {
   font-size: 20px;
   color: #ffffff80;
   opacity: 0;
-  transition: opacity 0.3s ease-in-out; /* Добавлен этот переход */
+  transition: opacity 0.3s ease-in-out;
 }
 
 .gallery-item:hover .caption {
@@ -382,9 +382,9 @@ body {
 }
 
 .gallery-item:hover .caption p {
-  opacity: 0.95; /* Показываем подзаголовок при наведении */
+  opacity: 0.95;
 }
 
 .gallery-item:hover .caption h2 {
-  opacity: 1; /* Показываем подзаголовок при наведении */
+  opacity: 1;
 }

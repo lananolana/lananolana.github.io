@@ -1,8 +1,8 @@
-//Печать слов в заголовке на первой странице
+// Words typing on the first page
 
-const wordsToType = ["QA Engineer", "problem solver", "team player"]; // Список слов для набора
-const typingSpeed = 100; // Скорость набора в миллисекундах (чем меньше, тем быстрее)
-const deleteSpeed = 50; // Скорость стирания в миллисекундах
+const wordsToType = ["QA Engineer", "problem solver", "team player"];
+const typingSpeed = 100;
+const deleteSpeed = 50;
 
 const typingTextElement = document.getElementById("typing-text");
 let currentWordIndex = 0;
@@ -22,17 +22,17 @@ async function typeAndDelete() {
 
         if (currentIndex === currentWord.length) {
             isDeleting = true;
-            await new Promise(resolve => setTimeout(resolve, 1000)); // Задержка перед стиранием
+            await new Promise(resolve => setTimeout(resolve, 1000));
         }
     } else {
         currentText = currentText.slice(0, -1);
         typingTextElement.textContent = currentText;
         if (currentText === "") {
             isDeleting = false;
-            currentWordIndex = (currentWordIndex + 1) % wordsToType.length; // Переход к следующему слову
-            await new Promise(resolve => setTimeout(resolve, 500)); // Задержка перед началом печати нового слова
+            currentWordIndex = (currentWordIndex + 1) % wordsToType.length;
+            await new Promise(resolve => setTimeout(resolve, 500));
             currentIndex = 0;
-            currentText = ""; // Сбрасываем currentText
+            currentText = "";
         }
     }
 
@@ -41,7 +41,7 @@ async function typeAndDelete() {
 
 typeAndDelete();
 
-// Плавная прокрутка страницы
+// Smooth page scrolling
 
 document.addEventListener('DOMContentLoaded', function() {
   var portfolioSection = document.getElementById('portfolio-section');
@@ -57,14 +57,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Обработчик для плавной прокрутки при клике на кнопку
+  // Handler for smooth scrolling when clicking on a button
   var scrollToPortfolio = document.getElementById('scroll-to-portfolio');
   scrollToPortfolio.addEventListener('click', function(event) {
     event.preventDefault();
     portfolioSection.scrollIntoView({ behavior: 'smooth' });
   });
 
-  // Обработчик для автоматической прокрутки при скролле вниз
+  // Handler for automatic scrolling when scrolling downwards
   window.addEventListener('wheel', function(event) {
     if (!isScrolling) {
       if (event.deltaY > 0) {
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// Печать слов в заголовке на второй странице
+// Words typing on the second page
 
 const wordsToType2 = ["banking", "medicine", "everything"];
 
@@ -119,7 +119,7 @@ async function typeAndDelete2() {
 
 typeAndDelete2();
 
-// Открытие и закрытие попапа
+// Opening and closing a popup
 
 const openPopups = document.querySelectorAll('.open_pop_up');
 const closePopups = document.querySelectorAll('.pop_up_close');
@@ -141,7 +141,7 @@ for (let i = 0; i < closePopups.length; i++) {
   });
 }
 
-// Прокрутка вверх
+// Scroll up
 
 const btnUp = {
     el: document.querySelector('.btn-up'),
@@ -156,7 +156,7 @@ const btnUp = {
             const scrollY = window.scrollY || document.documentElement.scrollTop;
             const windowHeight = window.innerHeight;
 
-            // Показывать кнопку, если прокрутка больше половины высоты окна браузера
+            // Show button if scrolling is more than half the height of the browser window
             scrollY > windowHeight / 2 ? this.show() : this.hide();
         });
         document.querySelector('.btn-up').onclick = () => {
