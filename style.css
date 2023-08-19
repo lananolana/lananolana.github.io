@@ -249,7 +249,7 @@ body {
   top: 40px;
   left: 100%;
   transform: translateX(0%);
-  background-color: rgba(0 0 0 80%);
+  background-color: #000000cc;
   color: white;
   padding: 5px 10px;
   border-radius: 5px;
