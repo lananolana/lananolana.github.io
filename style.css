@@ -353,7 +353,7 @@ body {
   bottom: 0;
   left: 0;
   padding: 15px;
-  color: rgba(255 255 255 100%);
+  color: whitesmoke;
   transform: translate(0, 0);
   transition: transform 0.3s ease-in-out;
 }
@@ -363,7 +363,7 @@ body {
   margin-bottom: 0;
   font-size: 38px;
   font-weight: bold;
-  color: rgba(255 255 255 100%);
+  color: whitesmoke;
   opacity: 0.8;
   transition: opacity 0.3s ease-in-out;
 }
