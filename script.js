@@ -121,9 +121,9 @@ typeAndDelete2();
 
 // Opening and closing a popup
 
-const openPopups = document.querySelectorAll('.open_pop_up');
-const closePopups = document.querySelectorAll('.pop_up_close');
-const popups = document.querySelectorAll('.pop_up');
+const openPopups = document.querySelectorAll('.open-pop-up');
+const closePopups = document.querySelectorAll('.pop-up-close');
+const popups = document.querySelectorAll('.pop-up');
 
 for (let i = 0; i < openPopups.length; i++) {
   openPopups[i].addEventListener('click', function(e) {
@@ -146,10 +146,10 @@ for (let i = 0; i < closePopups.length; i++) {
 const btnUp = {
     el: document.querySelector('.btn-up'),
     show() {
-        this.el.classList.remove('btn-up_hide');
+        this.el.classList.remove('btn-up-hide');
     },
     hide() {
-        this.el.classList.add('btn-up_hide');
+        this.el.classList.add('btn-up-hide');
     },
     addEventListener() {
         window.addEventListener('scroll', () => {
